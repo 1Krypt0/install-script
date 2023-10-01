@@ -7,6 +7,9 @@ paru -S ttf-iosevka-nerd ttf-iosevka-slab --noconfirm
 
 mkdir ~/.config/
 
+echo "Removing .zshrc to make sure there are no conflicts"
+rm ~/.zshrc
+
 git clone https://github.com/1Krypt0/dotfiles ~/.dotfiles
 
 cd ~/.dotfiles || exit
