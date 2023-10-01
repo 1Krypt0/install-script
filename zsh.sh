@@ -6,7 +6,7 @@ sudo pacman -Syyu --noconfirm
 # Install paru so you can install AUR packages
 git clone https://aur.archlinux.org/paru.git
 cd paru || exit
-sudo makepkg -si --noconfirm
+makepkg -si --noconfirm
 
 paru -S xorg --noconfirm
 
