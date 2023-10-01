@@ -2,7 +2,7 @@
 #
 
 # Setup more low-level things
-paru -S --noconfirm udisks2 bluez bluez-utils blueman pipewire-pulse nm-connection-editor dhcpcd networkmanager-pptp wmname xorg xdg-user-dirs
+paru -S --noconfirm udisks2 bluez bluez-utils blueman pipewire-pulse nm-connection-editor dhcpcd networkmanager-pptp wmname xorg xdg-user-dirs eza
 
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
@@ -13,4 +13,6 @@ paru -S --noconfirm alacritty neovim bspwm dunst sxhkd feh picom polybar redshif
 
 nvm install node && nvm use node
 
-# TODO: Install lightdm when you have the config ready
+# TODO: Configure lightdm when you have the config ready
+# TODO: Put nvm on path so that part works
+# TODO: Set up LunarVim
