@@ -1,11 +1,16 @@
 #!/bin/sh
 #
-paru -S --noconfirm alacritty neovim bspwm dunst sxhkd feh picom polybar python python-pip udisks2 redshift blight bluez bluez-utils blueman pipewire-pulse scrot rofi xclip zip unzip rar unrar pfetch nm-connection-editor dhcpcd networkmanager-pptp ttf-iosevka firefox obsidian discord visual-studio-code-bin zathura spotify-launcher keepassxc wmname docker docker-compose nodejs npm ksuperkey betterlockscreen xorg
 
-# TODO: Enable the necessary packages: bluetooth, lightdm and udisks
-# TODO: Install the necessary fonts
-# TODO: Solve npm permissions issue, as well as dockers
+# Setup more low-level things
+paru -S --noconfirm udisks2 bluez bluez-utils blueman pipewire-pulse nm-connection-editor dhcpcd networkmanager-pptp wmname xorg xdg-user-dirs
+
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+
+xdg-user-dirs-update
+
+paru -S --noconfirm alacritty neovim bspwm dunst sxhkd feh picom polybar redshift blight scrot rofi xclip zip unzip pfetch firefox obsidian discord visual-studio-code-bin zathura spotify-launcher keepassxc nvm ksuperkey betterlockscreen lxappearance
+
+nvm install node && nvm use node
+
 # TODO: Install lightdm when you have the config ready
-# TODO: Clone dotfiles as well, and install them
-# TODO: Add to audio video and input groups (almost forgot that)
-
